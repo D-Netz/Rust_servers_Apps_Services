@@ -3,10 +3,10 @@ image:
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - init: echo 'Start DB' # runs during prebuild
-    command: "service postgresql start"
-  - command: |
-      echo "populating db"
-      psql -U $DATABASE_USER -d $DATABASE_NAME < tutor_db/src/iter4/database.sql
+#    command: "service postgresql start"
+#  - command: |
+#      echo "populating db"
+#      psql -U $DATABASE_USER -d $DATABASE_NAME < tutor_db/src/iter4/database.sql
 
 
 
