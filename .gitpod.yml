@@ -4,10 +4,14 @@ image:
 tasks:
   - init: echo 'Start DB' # runs during prebuild
     command: "service postgresql start"
-  - name: Populate DB
-    command: psql -U $DATABASE_USER -d $DATABASE_NAME < tutor_db/src/iter4/database.sql
+  - command: |
+      echo "populating db"
+      psql -U $DATABASE_USER -d $DATABASE_NAME < tutor_db/src/iter4/database.sql
+
+
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 3000
     onOpen: open-preview
+    
