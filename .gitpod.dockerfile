@@ -1,4 +1,7 @@
 FROM gitpod/workspace-postgres
-RUN psql -c "CREATE DATABASE $DB_NAME;" \
-    && psql -c "CREATE USER $DB_USER WITH PASSWORD '$DB_USER_PW';" \
-    psql -c "GRANT ALL PRIVILEGES ON DATABASE $DB_NAME TO $DB_USER;"
+ENV db_name="$DB_NAME" \
+    db_user="$DB_USER" \
+    db_user_pw="$DB_USER_PW"
+RUN psql -c "CREATE DATABASE $db_name;" \
+    && psql -c "CREATE USER $db_user WITH PASSWORD '$db_user_pw';" \
+    && psql -c "GRANT ALL PRIVILEGES ON DATABASE $db_name TO $db_user;"

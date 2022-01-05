@@ -2,7 +2,9 @@ image:
   file: .gitpod.dockerfile
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: echo 'populating database' # runs during prebuild
+  - init: echo 'Start DB' # runs during prebuild
+    command: "service postgresql start"
+  - name: Populate DB
     command: psql -U $DATABASE_USER -d $DATABASE_NAME < tutor_db/src/iter4/database.sql
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
