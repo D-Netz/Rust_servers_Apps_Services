@@ -1,10 +1,10 @@
-# Rust_servers_Apps_Services
+# Rust servers/apps/services
 
 ## Testing sandbox for building with Rust
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/D-Netz/Rust_servers_Apps_Services)
 
 ### Once the dev environment is up and running, create database within postgres (automated setup in progress)
-[#bash]
+[#bash]# postgres=#
 ```
 psql
 
