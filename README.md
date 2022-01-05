@@ -19,7 +19,11 @@ psql
 
 # postgres=# \q
 
+# grant rights to table for $DATABASE_USER
+# postgres=# grant all privileges on table $TABLE_NAME to $DATABASE_USER
+
 # test login
 psql -U $DATABASE_USER -d $DATABASE_NAME --password
+
 
 ```
