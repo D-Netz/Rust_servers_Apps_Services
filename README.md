@@ -15,6 +15,8 @@ psql
 
 # postgres=# grant all privileges on database <db_name> to <db_uname>;
 
+# postgres=# \list
+
 # postgres=# \q
 
 # test login
