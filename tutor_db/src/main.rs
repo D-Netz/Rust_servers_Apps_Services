@@ -25,7 +25,7 @@ use state::AppState;
 async fn main() -> io::Result<()> {
     dotenv().ok();
 
-    let database_url = env::var("DATABASE_URL").expect("DATABASE_URL is not set in .env file");
+    let database_url = env::var("DB_URL").expect("DB_URL is not set in .env file");
     //may try to switch from unwrap to expect
     let db_pool = PgPool::new(&database_url).await.unwrap();
     // Construct App state
