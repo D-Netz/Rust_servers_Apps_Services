@@ -5,7 +5,7 @@ tasks:
   - init: >
       echo "$DB_NAME" &&
       echo "$DB_USER" &&
-      export $TEST=$(gp env | grep $DB_NAME | cut -d'=' -f2) &&
+      export TEST=$(gp env | grep $DB_NAME | cut -d'=' -f2) &&
       echo $TEST
       bash init_db.sh &&
       bash -c psql -U "$DB_USER" -d $DB_NAME < /workspace/Rust_servers_Apps_Services/tutor_db/src/iter4/database.sql
