@@ -4,7 +4,7 @@ set -e
 psql <<- EOSQL
     CREATE DATABASE eztutor;
     CREATE USER dtracy WITH PASSWORD 'P@$$w0rd';
-    GRANT ALL PRIVILEGES ON DATABASE $eztutor TO $dtracy;
+    GRANT ALL PRIVILEGES ON DATABASE eztutor TO dtracy;
 EOSQL
 
 #get env var
