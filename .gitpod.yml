@@ -3,12 +3,12 @@ image:
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - name: Start DB
-    init: |
-      sh ./scripts/init_db.sh
-      psql -U $DB_USER -d $DB_NAME -f tutor_db/src/iter4/database.sql
+    init: service postgresql start
+    command: psql -U $DB_USER -d $DB_NAME -f tutor_db/src/iter4/database.sql
 
 # List the ports to expose. Learn ore https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 3000
     onOpen: open-preview
-    
+
+#     sh ./scripts/init_db.sh

@@ -6,3 +6,6 @@ psql <<- EOSQL
     CREATE USER $DB_USER WITH PASSWORD '$DB_USER_PW';
     GRANT ALL PRIVILEGES ON DATABASE $DB_NAME TO $DB_USER;
 EOSQL
+
+#get env var
+#gp env | grep $DB_NAME | cut -d'=' -f2
