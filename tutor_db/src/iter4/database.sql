@@ -3,7 +3,7 @@ drop table if exists ez_course_c5;
 
 /* Create a table */
 create table ez_course_c5
-(r
+(
     course_id serial primary key,
     tutor_id INT not null,
     course_name varchar(140) not null,
